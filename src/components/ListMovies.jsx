@@ -54,7 +54,7 @@ export default function ListMovies() {
 
     const selectMovie = async (movie) => {
         await fetchMovie(movie.id);
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 80);
     };
 
     // Función para buscar películas
@@ -69,7 +69,7 @@ export default function ListMovies() {
 
     return (
         <div className='mb-40'>
-            <h1 className='text-4xl text-center pt-20'>🎬
+            <h1 className='text-4xl text-center pt-10'>🎬
                 Watch the trailer <br></br>for your favorite movie</h1>
             <h2 className='text-center mt-2 mb-5'></h2>
 
@@ -98,14 +98,15 @@ export default function ListMovies() {
                                     }}>More Info</button>
                                 </div>
                             </div>
-                            <div className='flex flex-col text-center justify-center bg-blue-100  px-6 rounded mt-2'>
-                                <h1 className='md:ms-4'>{movie.title}</h1>
+                          
+                        </div>
+                    </div>
+                    
+                )}
+                <div className='flex flex-col text-center justify-center bg-blue-100 px-6 rounded p-4'>
+                                <h1 className='md:ms-4 mb-4 '>{movie.title}</h1>
                                 <p>{movie.overview}</p>
                             </div>
-                        </div>
-
-                    </div>
-                )}
             </main>
 
             {/* Modal del tráiler */}
